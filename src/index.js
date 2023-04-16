@@ -23,7 +23,22 @@ function handleFormSubmit(e){
 function displayTask(task){
   const taskUl = document.getElementById('tasks');
   const taskLi = document.createElement('li');
- 
-  taskLi.textContent = task
+
+  taskLi.textContent = task + ' '
   taskUl.appendChild(taskLi);
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = "X";
+  deleteBtn.style.backgroundColor = "red"
+  deleteBtn.style.color = "white"
+  deleteBtn.style.fontSize = '10px'
+  taskLi.appendChild(deleteBtn)
+
+  deleteBtn.addEventListener('click', deleteTask)
+ 
+  
+}
+
+function deleteTask(e){
+   e.target.parentNode.remove();
 }
