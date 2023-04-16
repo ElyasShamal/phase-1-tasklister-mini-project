@@ -51,7 +51,7 @@ function getPriorityColor(priorityLevel){
     return 'red';
   }
   else if(priorityLevel === 2){
-    return 'black';
+    return 'green';
   }
   else{
     return 'blue'
